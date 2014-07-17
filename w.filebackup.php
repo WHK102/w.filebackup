@@ -14,7 +14,7 @@
  * --------
  *		http://web.page/w.filebackup.php
  * 
- * Al enviar la variable "token" via HTTP/POST restringe la visualización
+ * Al enviar la variable "token" via HTTP/POST restringe la visualizaciï¿½n
  * de los directorios hasta la ruta actual del script, esto evita que el
  * respaldo salga fuera del directorio planeado y cause una sobrecarga.
  * Solo utilizar sin esta variable en caso de querer hacer una backup
@@ -27,7 +27,7 @@
  * Legal:
  * -----
  * Uso esclusivo sobre servidores propios, nunca utilizar en servidores sin el consentimiento del administrador.
- * El usuario es totalmente responsable de su utilización.
+ * El usuario es totalmente responsable de su utilizaciï¿½n.
  * En caso de no aceptar este acuerdo no debe ser utilizado.
  * 
  * Compatible:
@@ -35,7 +35,7 @@
  * Este Script es compatible con servidores con safe mode en ON, servidores sin
  * zlib, sin gz, servidores que no tienen acceso a la shell del sistema, servdiores
  * con mod evasive y mod security, servdiores con firewalls y Antivirus antiShells.
- * No se asegura su funcionalidad al 100% debido a posibles reglas de protección que
+ * No se asegura su funcionalidad al 100% debido a posibles reglas de protecciï¿½n que
  * impidan su normal funcionamiento.
  */
 
@@ -61,7 +61,7 @@ if($getPath = substr($_SERVER['PHP_SELF'], strlen($_SERVER['SCRIPT_NAME']))){
 		header('Content-Transfer-Encoding: binary');
 		header('Content-Length: '.filesize($getPath));
 
-		/* Hacia el infinito y mas allá! */
+		/* Hacia el infinito y mas allï¿½! */
 		if(!@ini_get('safe_mode'))
 			@set_time_limit(0);
 
@@ -89,7 +89,7 @@ if($getPath = substr($_SERVER['PHP_SELF'], strlen($_SERVER['SCRIPT_NAME']))){
 		$err = 'File not found or access denied ( '.$getPath.' ).';
 }
 
-/* Utiliza variables que no sean tan fáciles de incluir en un
+/* Utiliza variables que no sean tan fï¿½ciles de incluir en un
  * mod security o alguna regla del firewall (do es utilizado
  * por vbulletin). */
 if(isset($_GET['do']) and (is_dir($_GET['do'])))
@@ -170,6 +170,6 @@ unset($items['glob']);
 </html>
 
 <?php
-/* Evita la ejecución arbitraria por un LFI o <preppendfile> */
+/* Evita la ejecucion arbitraria por un LFI o <preppendfile> */
 exit;
 
