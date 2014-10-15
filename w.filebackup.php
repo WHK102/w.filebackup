@@ -170,6 +170,6 @@ unset($items['glob']);
 </html>
 
 <?php
-/* Evita la ejecucion arbitraria por un LFI o <preppendfile> */
+/* Evita la ejecución arbitraria por un LFI o <preppendfile> */
 exit;
 
